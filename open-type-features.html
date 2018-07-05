@@ -1,0 +1,354 @@
+<html>
+<head>
+	<title>Font Feature 2000</title>
+
+<style>
+body {
+	padding: 24px;
+	color: #333;
+	background-color: #eee;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 400;
+	margin-bottom: 0.5em;
+}
+
+body,
+td,
+input,
+button {
+	font-size: 30px;
+	font-weight: 400;
+	font-family: "SQ Market", "Graphik";
+}
+
+table {
+	border-collapse: collapse;
+}
+
+
+th {
+	padding: 8px 0;
+	color: #999;
+	font-weight: normal;
+}
+
+.label {
+	font-size: 22px;
+}
+
+.sublabel {
+	font-size: 16px;
+	margin-bottom: 0.5em;
+	color: #888;
+}
+
+td {
+	vertical-align: top;
+	border: 2px solid #333;
+	padding: 16px 16px;
+}
+
+tr td:first-of-type {
+	border-left: 0;
+	padding-left: 0;
+}
+
+tr td:last-of-type {
+	border-right: 0;
+}
+
+.code {
+	font-size: 12px;
+	font-family: 'menlo', 'monaco', monospace;
+	line-height: 1.4em;
+	color: #888;
+}
+
+.hidden-code {
+	display: none;
+	white-space: pre;
+	font-size: 12px;
+	font-family: 'menlo', 'monaco', monospace;
+	line-height: 1.4em;
+	color: #888;
+}
+
+.bonus {
+	margin-top: 0.75em;
+	color: #888;
+	margin-bottom: 0.75em;
+}
+
+.bonus-code {
+	white-space: pre;
+	font-size: 18px;
+	font-family: 'menlo', 'monaco', monospace;
+	line-height: 1.4em;
+}
+.bonus-symbol {
+	font-size: 24px;
+	position: relative;
+	top: 2px;
+}
+
+.off {
+
+}
+
+.on {
+	background-color: #ffe;
+}
+
+.fineprint {
+	font-size: 12px;
+	color: #888;
+	line-height: 1.6em;
+}
+</style>
+</head>
+<body>
+
+
+<h3>Open Type Features</h3>
+
+<table>
+	<tr>
+		<td class="label">
+			Case-Sensitive Forms
+			<div class="code">
+				font-feature-settings: 'case'<br>
+			</div>
+		</td>
+		<td class="off">
+			>A-B¡C¿D<E(F)
+		</td>
+		<td class="on" style="font-feature-settings: 'case'">
+			>A-B¡C¿D<E(F)
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Fractions
+			<div class="code">
+				font-variant-numeric: diagonal-fractions<br>
+				font-feature-settings: 'frac'<br>
+			</div>
+		</td>
+		<td>
+			1/2
+		</td>
+		<td class="on" style="font-variant-numeric: diagonal-fractions">
+			1/2
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Standard Ligatures<br>
+			<div class="sublabel">DEFAULT</div>
+			<div class="code">
+				font-variant-ligatures: common-ligatures<br>
+				font-feature-settings: 'liga', 'clig'<br>
+			</div>
+			<div class="hidden-code">
+script latn;
+sub f i by fi;
+sub f l by fl;
+sub r f by r_f;
+sub r t by r_t;
+language AZE ;
+sub f i by fi;
+sub f l by fl;
+sub r f by r_f;
+sub r t by r_t;
+language CRT ;
+sub f i by fi;
+sub f l by fl;
+sub r f by r_f;
+sub r t by r_t;
+language MOL ;
+sub f i by fi;
+sub f l by fl;
+sub r f by r_f;
+sub r t by r_t;
+language ROM ;
+sub f i by fi;
+sub f l by fl;
+sub r f by r_f;
+sub r t by r_t;
+language TRK ;
+sub f i by fi;
+sub f l by fl;
+sub r f by r_f;
+sub r t by r_t;
+</div>
+
+		</td>
+		<td style="font-variant-ligatures: none;">
+			fi fl rf rt
+		</td>
+		<td class="on" style="font-variant-ligatures: common-ligatures;">
+			fi fl rf rt
+		</td>
+	</tr>
+<tr>
+		<td class="label">
+			Discretionary Ligatures
+			<div class="code">
+				font-variant-ligatures: discretionary-ligatures<br>
+				font-feature-settings: 'dlig'<br>
+			</div>
+			<div class="hidden-code">
+script latn;
+lookup dlig0 {
+sub f f t by f_f_t;
+sub f f by f_f;
+sub f t by f_t;
+sub r f f by r_f_f;
+} dlig0;
+lookup dlig1 {
+sub uniF8FF by apple.alt;
+} dlig1;
+language AZE ;
+lookup dlig2 {
+sub f f t by f_f_t;
+sub f f by f_f;
+sub f t by f_t;
+sub r f f by r_f_f;
+} dlig2;
+lookup dlig3 {
+sub uniF8FF by apple.alt;
+} dlig3;
+language CRT ;
+lookup dlig4 {
+sub f f t by f_f_t;
+sub f f by f_f;
+sub f t by f_t;
+sub r f f by r_f_f;
+} dlig4;
+lookup dlig5 {
+sub uniF8FF by apple.alt;
+} dlig5;
+language MOL ;
+lookup dlig6 {
+sub f f t by f_f_t;
+sub f f by f_f;
+sub f t by f_t;
+sub r f f by r_f_f;
+} dlig6;
+lookup dlig7 {
+sub uniF8FF by apple.alt;
+} dlig7;
+language ROM ;
+lookup dlig8 {
+sub f f t by f_f_t;
+sub f f by f_f;
+sub f t by f_t;
+sub r f f by r_f_f;
+} dlig8;
+lookup dlig9 {
+sub uniF8FF by apple.alt;
+} dlig9;
+language TRK ;
+lookup dlig10 {
+sub f f t by f_f_t;
+sub f f by f_f;
+sub f t by f_t;
+sub r f f by r_f_f;
+} dlig10;
+lookup dlig11 {
+sub uniF8FF by apple.alt;
+} dlig11;
+
+</div>
+
+		</td>
+		<td>
+			fft ff ft
+		</td>
+		<td class="on" style="font-variant-ligatures: discretionary-ligatures;">
+			fft ff ft
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Tabular Figures
+			<div class="code">
+				font-variant-numeric: tabular-nums<br>
+				font-feature-settings: 'tnum'<br>
+			</div>
+		</td>
+		<td>
+			0000<br>
+			1111
+		</td>
+		<td class="on" style="font-variant-numeric: tabular-nums;">
+			0000<br>
+			1111
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Proportional Figures
+			<div class="sublabel">DEFAULT</div>
+			<div class="code">
+				font-variant-numeric: proportional-nums<br>
+				font-feature-settings: 'pnum'<br>
+			</div>
+		</td>
+		<td>
+			0000<br>
+			1111
+		</td>
+		<td class="on" style="font-variant-numeric: proportional-nums;">
+			0000<br>
+			1111
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Superscript
+			<div class="code">
+				font-feature-settings: 'sups'<br>
+			</div>
+		</td>
+		<td>
+			e=mc2
+		</td>
+		<td class="on" style="font-feature-settings: 'sups'">
+			e=mc2
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Denominators
+			<div class="code">
+				font-feature-settings: 'dnom'<br>
+			</div>
+		</td>
+		<td>
+			C8+H10+N4+02
+		</td>
+		<td class="on" style="font-feature-settings: 'dnom'">
+			C8+H10+N4+O2
+		</td>
+	</tr>
+</table>
+
+
+<div class="bonus">
+	<span class="bonus-code">opt + shift + k =</span> <span class="bonus-symbol"></span>
+</div>
+
+
+<div class="fineprint">
+	Created: Tue Dec 04 2012 07:25:00 GMT-0800 (Pacific Standard Time)<br>
+	Last modified: Wed Feb 25 2015 10:36:32 GMT-0800 (Pacific Standard Time)<br>
+	Copyright (c) 2012 by ARS Type®-Angus R. Shamal. All rights reserved.<br>
+</div>
+
+</body>
+</html>
