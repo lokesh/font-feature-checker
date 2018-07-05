@@ -2,7 +2,7 @@
 
 _Project Status: On Hold_
 
-**Goal.** The goal was to build a client-side web app that let users upload an font file and check what ligatures, stylistic sets, international languages, and open type features a font supported. These features are implemented inconsistently and many people are unaware that they exist or how to check if a font supports them.
+**Goal.** The goal was to build a client-side web app that let users upload a font file and check what ligatures, stylistic sets, international languages, and open type features a font supported. These features are implemented inconsistently and many people are unaware that they exist or how to check if a font supports them.
 
 **Technical roadblock.** I checkedi out the features in the [opentype.js](https://opentype.js.org/) library and because the metadata parsing for stylistic sets, a key feature for what I wanted to add, was not supported, I've decided to abort this project as it would take more work than I'm willing to commit at this time.
 
